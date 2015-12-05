@@ -12,8 +12,7 @@ c.forEach(function(e,t,n){n[t]=Array.from(new Array(u),function(){return 0})})
 var l=.1
 a["default"].register("resetListener",function(e){"resetgame"===e.action&&(h.started=!1,h.over=!1,i.notMines=0,i.uncovered=0)})
 var p=function(){i.uncovered++,i.uncovered===i.notMines&&(console.log("youwin"),a["default"].dispatch({action:"gameover",result:"win"}))},d=function(){var e=0,t=0
-return{reset:function(n){t=n,e=0},add:function(){e++},getCount:function(){return console.log(t===e),t===e}}}(),f=function(e,t,n){console.log(e," ",t)
-for(var o=0;s>o;o++){c[o]=[]
+return{reset:function(n){t=n,e=0},add:function(){e++},getCount:function(){return console.log(t===e),t===e}}}(),f=function(e,t,n){for(var o=0;s>o;o++){c[o]=[]
 for(var r=0;u>r;r++)c[o][r]=Math.random()<l?9:0}c[e][t]=0,e>0&&t>0&&(c[e-1][t-1]=0),e>0&&(c[e-1][t]=0),e>0&&u-1>t&&(c[e-1][t+1]=0),s-1>e&&t>0&&(c[e+1][t-1]=0),s-1>e&&(c[e+1][t]=0),s-1>e&&u-1>t&&(c[e+1][t+1]=0),u-1>t&&(c[e][t+1]=0),t>0&&(c[e][t-1]=0),i.notMines=0
 for(var o=0;s>o;o++)for(var r=0;u>r;r++)if(0===c[o][r]){i.notMines++
 var p=0
@@ -45,7 +44,7 @@ o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Obj
 Object.defineProperty(n,"__esModule",{value:!0})
 var u=e("react"),c=o(u),l=e("./data.js"),p=o(l),d=e("./mine.jsx"),f=o(d),h=e("./flux.js"),v=o(h),m=function(e){function t(e){r(this,t)
 var n=a(this,Object.getPrototypeOf(t).call(this,e))
-return n.state={mines:p["default"].mines,gameState:"playing"},v["default"].register("minefieldListener",function(e){"updatemines"===e.action&&n.setState({mines:p["default"].mines},e.callback)}),v["default"].register("resetControlListener",function(e){"gameover"===e.action&&n.setState({gameState:e.result})}),n.mouseUp=function(e){v["default"].dispatch({action:"canclepreview"})},n.resetGame=function(){v["default"].dispatch({action:"resetgame"}),n.setState({gameState:"playing"})},n}return i(t,e),s(t,[{key:"render",value:function(){var e=this
+return n.state={mines:p["default"].mines,gameState:"playing"},v["default"].register("minefieldListener",function(e){"updatemines"===e.action&&n.setState({mines:p["default"].mines},e.callback)}),v["default"].register("resetControlListener",function(e){"gameover"===e.action&&n.setState({gameState:e.result})}),n.mouseUp=function(e){v["default"].dispatch({action:"canclepreview"})},n.resetGame=function(){v["default"].dispatch({action:"resetgame"}),n.setState({gameState:"playing"})},n}return i(t,e),s(t,[{key:"componentDidMount",value:function(){p["default"].reset(0,0,function(){}),p["default"].started=!1}},{key:"render",value:function(){var e=this
 return c["default"].createElement("div",{onMouseUp:this.mouseUp,onContextMenu:function(e){e.preventDefault()}},c["default"].createElement("h1",null," Minesweeper "),c["default"].createElement("a",{onClick:this.resetGame},function(){switch(e.state.gameState){case"playing":return"Start Over"
 case"win":return"You Win! Play Again?"
 case"lose":return"You Lose! Play Again?"}}()),c["default"].createElement("ul",{className:"rows"},function(){return e.state.mines.map(function(t,n){return c["default"].createElement("ul",{className:"cols"},function(){return t.map(function(t,o){return c["default"].createElement(f["default"],{value:e.state.mines[n][o],x:n,y:o})})}())})}()))}}]),t}(c["default"].Component)
