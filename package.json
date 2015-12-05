@@ -1,0 +1,33 @@
+{
+  "name": "Minesweeper",
+  "description": "HTML5 game",
+  "version": "0.0.0",
+  "author": "Brian Blackwell",
+  "homepage": "",
+  "contributors": [
+    "Brian Blackell <industriousthought@gmail.com>"
+  ],
+  "scripts": {
+    "start": "http-server ./",
+    "build": "./build.sh"
+  },
+  "dependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "http-server": "^0.8.5",
+    "react": "^0.14.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18"
+  },
+  "keywords": [],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "index.js",
+  "license": "ISC"
+}

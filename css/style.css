@@ -1,0 +1,72 @@
+body {
+    font-family: arial;
+}
+
+.rows {
+
+}
+
+.cols {
+    float: left;
+    padding: 0px;
+}
+
+.mine {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    margin-left: 2px;
+    background: #f0f0f0;
+    outline: 1px solid #ccc;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+
+.hidden {
+    color: rgb(0, 0, 0, 0);
+    outline: 1px solid #aaa;
+    border-top: 1px solid #eee;
+    background: #d0d0d0;
+}
+
+.flag {
+    width: 20px;
+
+}
+
+.preview {
+    background: #a0a0a0;
+}
+
+.color1 {
+    color: blue;
+}
+
+.color2 {
+    color: green;
+}
+
+.color3 {
+    color: red;
+}
+
+.color4 {
+    color: purple;
+}
+
+.color5 {
+    color: darkred;
+}
+
+.color6 {
+    color: darkred;
+}
+
+.color7 {
+    color: darkred;
+}
+
+.color8 {
+    color: darkred;
+}
+
