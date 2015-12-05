@@ -60,10 +60,10 @@ class Page extends React.Component {
                 <ul className='rows'>
                     {(() => {
                         return this.state.mines.map((row, x) => {
-                            return (<ul className='cols'>
+                            return (<ul className='cols' key={x}>
                                 {(() => {
                                     return row.map((mine, y) => {
-                                        return <Mine value={this.state.mines[x][y]} x={x} y={y} />
+                                        return <Mine key={y} value={this.state.mines[x][y]} x={x} y={y} />
                                     });
                                 })()}
                             </ul>)
