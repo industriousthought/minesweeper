@@ -54,7 +54,6 @@ const flagCount = ( () => {
 }) ();
 
 const populateData = (startx, starty, callback) => {
-    console.log(startx, ' ', starty);
 
     for (let i = 0; i < width; i++) {
         mines[i] = [];
@@ -98,7 +97,6 @@ const populateData = (startx, starty, callback) => {
         callback: callback
     });
 };
-
 
 
 let data = {
