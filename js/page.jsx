@@ -34,6 +34,10 @@ class Page extends React.Component {
             this.setState({gameState: 'playing'});
         };
     }
+    componentDidMount() {
+        Data.reset(0, 0, () => {});
+        Data.started = false;
+    }
     render() {
         return (
             <div onMouseUp={this.mouseUp} onContextMenu={e => { e.preventDefault(); }}>
